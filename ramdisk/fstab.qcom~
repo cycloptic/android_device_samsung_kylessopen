@@ -1,0 +1,7 @@
+/boot       emmc	/dev/block/mmcblk0p8
+/system     ext4	/dev/block/mmcblk0p16
+/data       ext4	/dev/block/mmcblk0p25
+/cache      ext4	/dev/block/mmcblk0p17
+/recovery   emmc	/dev/block/mmcblk0p12
+/storage/sdcard0	auto 		/devices/platform/msm_sdcc.1/mmc_host/mmc1
+/storage/usbdisk0	auto 		/devices/platform/msm_hsusb_host.0/usb1
