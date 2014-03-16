@@ -142,7 +142,7 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Off-mode charging
 BOARD_CHARGING_MODE_BOOTING_LPM := "/sys/class/power_supply/ac/online"
-BOARD_LPM_BOOT_ARGUMENT_NAME := androidboot.bootchg
+BOARD_LPM_BOOT_ARGUMENT_NAME := androidboot.boot_pause
 BOARD_LPM_BOOT_ARGUMENT_VALUE := batt
 
 # Recovery
