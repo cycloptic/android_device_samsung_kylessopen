@@ -72,6 +72,7 @@ TARGET_QCOM_DISPLAY_VARIANT := legacy
 TARGET_NO_HW_VSYNC := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 USE_LEGACY_SCREENSHOT := true
+BOARD_USE_MHEAP_SCREENSHOT := true
 
 # OMX
 TARGET_QCOM_LEGACY_OMX := true
@@ -93,10 +94,12 @@ TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_CPU_SMP := true
 TARGET_ARCH_LOWMEM := true
+TARGET_QCOM_LEGACY_MMPARSER := true
 
 # Camera
 BOARD_USES_PROPRIETARY_LIBCAMERA := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
+TARGET_DISABLE_ARM_PIE=true
 COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB -DSAMSUNG_CAMERA_LEGACY -DNEEDS_VECTORIMPL_SYMBOLS
 
 # RIL
@@ -122,7 +125,6 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/kylessopen/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/kylessopen/bluetooth/vnd_bcmdhd.txt
 
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
@@ -140,7 +142,6 @@ TARGET_NO_INITLOGO := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Off-mode charging
-BOARD_CHARGING_MODE_BOOTING_LPM := "/sys/class/power_supply/ac/online"
 BOARD_LPM_BOOT_ARGUMENT_NAME := androidboot.boot_pause
 BOARD_LPM_BOOT_ARGUMENT_VALUE := batt
 
@@ -149,10 +150,10 @@ TARGET_RECOVERY_INITRC := device/samsung/kylessopen/recovery/init.rc
 TARGET_RECOVERY_FSTAB := device/samsung/kylessopen/ramdisk/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/kylessopen/recovery/recovery_keys.c
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/f_mass_storage/lun/file
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_HAS_SDCARD_INTERNAL := true
+BOARD_HAS_SDCARD_INTERNAL := trues
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
