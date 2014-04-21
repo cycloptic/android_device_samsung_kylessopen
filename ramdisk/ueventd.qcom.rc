@@ -197,3 +197,6 @@
 
 #for SysScope
 /dev/block/mmcblk0p13 0660 system system
+
+/sys/class/rfkill/rfkill0/state 0660 bluetooth bluetooth
+/sys/class/rfkill/rfkill0/type 0660 bluetooth bluetooth

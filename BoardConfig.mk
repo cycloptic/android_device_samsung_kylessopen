@@ -146,18 +146,22 @@ TARGET_NO_INITLOGO := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Off-mode charging
+BOARD_CHARGING_MODE_BOOTING_LPM := "/sys/class/power_supply/ac/online"
+BOARD_BATTERY_DEVICE_NAME := "battery"
+BOARD_LPM_BOOT_ARGUMENT_NAME := "androidboot.boot_pause"
+BOARD_LPM_BOOT_ARGUMENT_VALUE := "batt"
 BOARD_LPM_BOOT_ARGUMENT_NAME := androidboot.boot_pause
 BOARD_LPM_BOOT_ARGUMENT_VALUE := batt
 
 # Recovery
-TARGET_RECOVERY_INITRC := device/samsung/kylessopen/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/samsung/kylessopen/recovery/init.recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/kylessopen/ramdisk/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/kylessopen/recovery/recovery_keys.c
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun%d/file"
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_HAS_SDCARD_INTERNAL := trues
+RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
@@ -170,3 +174,4 @@ SKIP_SET_METADATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := "/sys/class/leds/lcd-backlight/brightness"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_DEFAULT_EXTERNAL_STORAGE := true

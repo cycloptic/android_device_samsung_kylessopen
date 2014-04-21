@@ -21,9 +21,6 @@ debug.gr.numframebuffers=3
 persist.sys.strictmode.visual-false
 ro.bq.gpu_to_cpu_unsupported=1
 
-# Camcorder
-debug.camcorder.disablemeta=1
-
 # FM Radio
 ro.fm.analogpath.supported=true
 ro.fm.transmitter=false
